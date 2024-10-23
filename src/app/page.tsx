@@ -37,7 +37,7 @@ const productList: Product[] = [
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const openModal = (product: any) => {
     setSelectedProduct(product);
