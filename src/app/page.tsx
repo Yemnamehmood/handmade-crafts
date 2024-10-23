@@ -39,7 +39,7 @@ export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-  const openModal = (product: any) => {
+  const openModal = (product: Product) => {
     setSelectedProduct(product);
     setModalOpen(true);
   };
@@ -131,6 +131,7 @@ export default function Home() {
               className="modal-image"
               width={300}
               height={300}
+
             />
             <h2 className='text-2xl font-semibold'>{selectedProduct.name}</h2>
             <p>${selectedProduct.price.toFixed(2)}</p>
