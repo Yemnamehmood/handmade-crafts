@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* General Styles */
 body {
   margin: 0;
@@ -45,33 +44,30 @@ nav .menu a:hover {
   color: black;
   background-color: white;
   border-color: #555;
-
 }
 
 .home {
-    position: relative; /* Ensures absolute positioning for children */
-    height: 60vh; /* Set the height of the home section */
-    overflow: hidden; /* Prevent overflow */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    color: white; /* Text color */
-    text-align: center; /* Center text */
-
+  position: relative; /* Ensures absolute positioning for children */
+  height: 60vh; /* Set the height of the home section */
+  overflow: hidden; /* Prevent overflow */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
 }
 
 .background-video {
-    position: absolute; /* Position video absolutely */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    min-height: 100%; /* Cover full height */
-    min-width: 100%; /* Cover full width */
-    transform: translate(-50%, -50%); /* Center the video */
-    object-fit: cover; /* Cover the area without distortion */
-    z-index: 1; /* Place video behind content */
-
+  position: absolute; /* Position video absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  min-height: 100%; /* Cover full height */
+  min-width: 100%; /* Cover full width */
+  transform: translate(-50%, -50%); /* Center the video */
+  object-fit: cover; /* Cover the area without distortion */
+  z-index: 1; /* Place video behind content */
 }
 
 .content {
@@ -206,8 +202,7 @@ p {
 .contact {
   background: rgb(36, 35, 35);
   padding: 2rem;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 .contact .social-links {
@@ -221,8 +216,44 @@ footer {
   text-align: center;
   padding: 1rem;
   background-color: #333;
-  color: white;
-  
-  
+  color: white; 
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack navbar items on mobile */
+    align-items: flex-start; /* Align to start */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  nav .menu {
+    flex-direction: column; /* Stack menu items */
+    margin-top: 1rem; /* Add spacing between navbar and menu */
+    width: 100%; /* Full width */
+  }
+
+  nav .menu li {
+    margin: 0.5rem 0; /* Adjust margin for stacked items */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Smaller heading for mobile */
+  }
+
+  p {
+    font-size: 1.2rem; /* Smaller paragraph for mobile */
+  }
+
+  .product-listing {
+    grid-template-columns: 1fr; /* One column for mobile */
+  }
+
+  .product-card {
+    padding: 1rem 0.5rem; /* Less padding on mobile */
+  }
+
+  .shop {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+}
