@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: rgb(36, 35, 35);
   color: rgb(250, 246, 246);
   font-size: 100%;
 }
@@ -44,6 +44,7 @@ nav .menu a:hover {
   border-radius: 4px;
   color: black;
   background-color: white;
+  border-color: #555;
 
 }
 

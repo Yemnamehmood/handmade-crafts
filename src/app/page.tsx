@@ -1,8 +1,18 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const productList = [
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  image: string;
+}
+
+
+const productList: Product[] = [
   { id: 1, name: 'Handmade Necklace', price: 29.99,     description: 'A beautiful handmade necklace crafted from high-quality materials.',
     image: '/aashish-chandra-c2ycQftGmAs-unsplash.jpg' },
   { id: 2, name: 'Ceramic Mug', price: 15.99,     description: 'A stylish ceramic mug, perfect for your morning coffee.',
@@ -115,10 +125,12 @@ export default function Home() {
         <div className="modal">
           <div className="modal-content">
             <button className="close" onClick={closeModal}>&times;</button>
-            <img
+            <Image
               src={selectedProduct.image}
               alt={selectedProduct.name}
               className="modal-image"
+              width={300}
+              height={300}
             />
             <h2 className='text-2xl font-semibold'>{selectedProduct.name}</h2>
             <p>${selectedProduct.price.toFixed(2)}</p>
